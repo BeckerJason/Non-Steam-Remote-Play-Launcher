@@ -1,5 +1,6 @@
 # Non-Steam-Remote-Play-Launcher
 Used to Launch a non steam game thru steam and allow Remote Play Together.
+ONLY THE HOST NEEDS THIS
 
 [![GitHub Release](https://img.shields.io/github/v/release/BeckerJason/Non-Steam-Remote-Play-Launcher)](https://github.com/BeckerJason/Non-Steam-Remote-Play-Launcher/releases)
 
