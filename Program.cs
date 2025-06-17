@@ -28,8 +28,17 @@ class Program
         }
         else
         {
-            string json = File.ReadAllText(configFilePath);
-            config = JsonSerializer.Deserialize<ExeConfiguration>(json);
+            try
+            {
+                string json = File.ReadAllText(configFilePath);
+                config = JsonSerializer.Deserialize<ExeConfiguration>(json);
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine("Invalid JSON format in Configuration.json. Make sure there are only forward slashes in your path:");
+                Console.WriteLine(ex.Message);
+                return;
+            }
             if (config == null||config.EXEPath=="")
             {
                 Console.WriteLine("Failed to load configuration. Please check the Configuration.json file.");
